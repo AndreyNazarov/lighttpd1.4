@@ -383,6 +383,7 @@ static int config_insert(server *srv) {
 				"unexpected value for server.modules; expected list of \"mod_xxxxxx\" strings");
 		ret = HANDLER_ERROR;
 	} else {
+#if !defined(LIGHTTPD_STATIC)
 		data_string *ds;
 		int prepend_mod_indexfile = 1;
 		int append_mod_dirlisting = 1;
@@ -497,6 +498,7 @@ static int config_insert(server *srv) {
 			      #endif
 			}
 		}
+#endif
 	}
 
 	return ret;

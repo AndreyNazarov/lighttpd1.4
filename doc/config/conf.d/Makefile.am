@@ -13,6 +13,7 @@ EXTRA_DIST=access_log.conf \
 	mime.conf \
 	mod.template \
 	mysql_vhost.conf \
+	pak.conf \
 	proxy.conf \
 	rrdtool.conf \
 	scgi.conf \

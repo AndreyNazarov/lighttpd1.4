@@ -245,6 +245,11 @@ mod_usertrack_la_SOURCES = mod_usertrack.c
 mod_usertrack_la_LDFLAGS = $(common_module_ldflags)
 mod_usertrack_la_LIBADD = $(common_libadd)
 
+lib_LTLIBRARIES += mod_pak.la
+mod_pak_la_SOURCES = mod_pak.c
+mod_pak_la_LDFLAGS = $(common_module_ldflags)
+mod_pak_la_LIBADD = $(common_libadd)
+
 lib_LTLIBRARIES += mod_proxy.la
 mod_proxy_la_SOURCES = mod_proxy.c
 mod_proxy_la_LDFLAGS = $(common_module_ldflags)
@@ -409,37 +414,7 @@ if LIGHTTPD_STATIC
 ## (order is not important)
 lighttpd_SOURCES = \
   $(src) \
-  mod_access.c \
-  mod_accesslog.c \
-  mod_alias.c \
-  mod_auth.c \
-  mod_authn_file.c \
-  mod_cgi.c \
-  mod_compress.c \
-  mod_deflate.c \
-  mod_dirlisting.c \
-  mod_evasive.c \
-  mod_expire.c \
-  mod_extforward.c \
-  mod_fastcgi.c \
-  mod_flv_streaming.c \
-  mod_indexfile.c \
-  mod_proxy.c \
-  mod_redirect.c \
-  mod_rewrite.c \
-  mod_rrdtool.c \
-  mod_scgi.c \
-  mod_secdownload.c \
-  mod_setenv.c \
-  mod_simple_vhost.c \
-  mod_ssi_exprparser.c mod_ssi_expr.c mod_ssi.c \
-  mod_staticfile.c \
-  mod_status.c \
-  mod_uploadprogress.c \
-  mod_userdir.c \
-  mod_usertrack.c \
-  mod_vhostdb.c \
-  mod_webdav.c
+  mod_pak.c
 lighttpd_CPPFLAGS = \
   -DLIGHTTPD_STATIC \
   $(XML_CFLAGS) $(SQLITE_CFLAGS) \

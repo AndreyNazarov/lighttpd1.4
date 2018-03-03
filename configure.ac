@@ -1325,6 +1325,7 @@ do_build="\
   mod_fastcgi \
   mod_flv_streaming \
   mod_indexfile \
+  mod_pak \
   mod_proxy \
   mod_redirect \
   mod_rewrite \
